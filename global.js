@@ -20,7 +20,7 @@ function setColorScheme(colorScheme) {
 // Initialize pages for navigation
 let pages = [
   { url: '', title: 'Home' },
-  { url: 'projects/', title: 'Projects' },
+  // { url: 'projects/', title: 'Projects' },
   { url: 'resume/', title: 'CV' },
   { url: 'contact/', title: 'Contact' },
 ];

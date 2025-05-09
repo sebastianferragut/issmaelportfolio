@@ -62,7 +62,7 @@ body {
   }
 
   a {
-    color: #bbb; /* Lighter link color */
+    color: #4ca1ea; /* Lighter link color */
   }
 
   a.current {
@@ -214,6 +214,27 @@ form button {
 }
 
 .project-link-wrapper a:hover {
+  background-color: var(--color-accent); /* Background on hover */
+  color: white; /* Text color on hover */
+  border-color: var(--color-accent); /* Border color on hover */
+}
+
+/* Styling for h4 elements */
+h4 {
+  display: block; /* Make each h4 a block-level element */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange items in a column */
+  text-decoration: none;
+  color: blue;
+  padding: 0.5em .75em;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.3em;
+  
+  width: fit-content; /* Adjust the border length to fit the text */
+  transition: all 0.3s ease;
+}
+
+h4:hover {
   background-color: var(--color-accent); /* Background on hover */
   color: white; /* Text color on hover */
   border-color: var(--color-accent); /* Border color on hover */
@@ -425,6 +446,35 @@ h1 {
   font-size: 400%; /* Significantly larger than body text for contrast */
   margin-bottom: 0.5em; /* Space below the <h1> */
 }
+
+
+/* Media gallery styling */
+.media-gallery {
+  display: grid; /* Enable grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr)); /* Responsive columns */
+  gap: 1em; /* Space between images */
+  padding: 1em; /* Add padding inside the container */
+  justify-items: center; /* Center images horizontally */
+}
+
+.media-gallery img {
+  width: 100%; /* Adjust width to 100% of the container's width */
+  max-width: 600px; /* Maximum width for the image */
+  max-height: 600px; /* Maximum height for the image */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.media-gallery img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+
+
+/* EDIT BELOW FOR REMOVED ITEMS */
 
 /* Styling homepage GitHub stats */
 #profile-stats dl {
