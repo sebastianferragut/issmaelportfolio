@@ -23,8 +23,6 @@ let pages = [
   { url: 'projects/', title: 'Projects' },
   { url: 'resume/', title: 'CV' },
   { url: 'contact/', title: 'Contact' },
-  { url: 'meta/', title: 'Meta' },
-  { url: "https://github.com/sebastianferragut", title: 'GitHub' },
 ];
 
 // Check if we are on the home page
@@ -202,16 +200,5 @@ export function renderProjects(projects, containerElement, headingLevel = 'h3') 
     // Append the article to the container
     containerElement.appendChild(article);
   });
-}
-
-// Fetching GitHub user data 
-export async function fetchGitHubData(username) {
-  try {
-    const response = await fetchJSON(`https://api.github.com/users/${username}`);
-    return response;
-  } catch (error) {
-    console.error("Error fetching GitHub data:", error);
-    return null; // In case of error, return null
-  }
 }
 
